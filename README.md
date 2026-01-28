@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional developer portfolio showcasing my web development projects with a newsprint/editorial-inspired design theme.
 
-Currently, two official plugins are available:
+## 🎨 Design Philosophy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio embraces a publication-grade aesthetic with:
+- **Newsprint Theme**: Clean, editorial design inspired by traditional print media
+- **Typography-First**: Elegant serif fonts (Playfair Display, Lora) combined with modern UI fonts
+- **Structured Layout**: Grid-based, hierarchical information architecture
+- **Performance-Focused**: Fast loading with optimized assets
 
-## React Compiler
+## 🚀 Featured Projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **MAJISA — Digital Innovation Studio**: Product-focused tech studio crafting high-performance websites and intelligent systems
+- **Hajj Expense Management Console**: Mission-critical financial dashboard for real-time expense tracking and zero-error accounting
+- **Institute Management System (IMS)**: Centralized academic operations console for student records and administration
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React, Vite
+- **Styling**: Tailwind CSS, Custom CSS design system
+- **Database**: MongoDB, SQL
+- **Frameworks**: Next.js, Node.js
+- **UI Components**: Radix UI primitives
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Clone the repository
+git clone https://github.com/mohammed-ayan-zahoor/my-portfolio.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Navigate to project directory
+cd my-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The portfolio runs locally at `http://localhost:8080/`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+
+## 📧 Contact
+
+**Email**: mohammedayan76766@gmail.com  
+**GitHub**: [@mohammed-ayan-zahoor](https://github.com/mohammed-ayan-zahoor)
+
+## 📄 License
+
+All Rights Reserved © 2026
+
+---
+
+*This portfolio is a working record of projects and skills, curated to emphasize structure, clarity, and engineering discipline.*
