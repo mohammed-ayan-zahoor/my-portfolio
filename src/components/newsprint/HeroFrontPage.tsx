@@ -8,7 +8,7 @@ export function HeroFrontPage() {
                 <div className="grid grid-cols-12 gap-6 md:gap-8">
                     <div className="col-span-12 lg:col-span-8">
                         <p className="font-ui text-xs tracking-[0.22em] uppercase text-muted-foreground">Front page</p>
-                        <h1 className="mt-3 font-display text-6xl leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
+                        <h1 className="mt-3 font-display text-5xl leading-[0.9] tracking-tight break-words md:text-6xl lg:text-8xl">
                             A Web Developer Engineering Digital Experiences With Editorial Precision.
                         </h1>
 
