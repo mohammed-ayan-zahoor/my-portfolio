@@ -83,7 +83,7 @@ Implemented three types of structured data:
 - [x] Semantic HTML structure
 
 🚧 **To Do After Deployment:**
-- [ ] Submit sitemap to Google Search Console
+- [x] Submit sitemap to Google Search Console
 - [ ] Submit sitemap to Bing Webmaster Tools
 - [ ] Verify Google Search Console ownership
 - [ ] Enable Google Analytics
@@ -148,15 +148,14 @@ A Web Developer Engineering Digital Experiences With Editorial Precision.
 
 ### 1. **Immediate Actions** (After deploying to GitHub Pages)
 ```bash
-# Update the canonical URL once you have your live URL
-# Replace in index.html:
-https://mohammed-ayan-zahoor.github.io/my-portfolio/
-# with your actual deployed URL
+# These changes are already applied!
+# Your portfolio is live at:
+https://mohammed-ayan-zahoor.3ftech.in
 ```
 
 ### 2. **Google Search Console Setup**
 1. Go to: https://search.google.com/search-console
-2. Add property: `https://mohammed-ayan-zahoor.github.io/my-portfolio/`
+2. Add property: `https://mohammed-ayan-zahoor.3ftech.in`
 3. Verify ownership (HTML file method)
 4. Submit sitemap: `/sitemap.xml`
 5. Request indexing for homepage
