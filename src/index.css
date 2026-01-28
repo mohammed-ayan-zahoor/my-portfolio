@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+Design System Definition
+Fonts: Display (Playfair), Body (Lora), UI (Inter), Mono (JetBrains Mono)
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Newsprint Edition (single light mode) */
+    --paper: 60 20% 97%;
+    /* #F9F9F7 */
+    --ink: 0 0% 7%;
+    /* #111111 */
+    --divider: 60 11% 89%;
+    /* #E5E5E0 */
+    --editorial: 0 100% 40%;
+    /* #CC0000 */
+
+    --background: var(--paper);
+    --foreground: var(--ink);
+
+    --card: var(--paper);
+    --card-foreground: var(--ink);
+
+    --popover: var(--paper);
+    --popover-foreground: var(--ink);
+
+    /* Primary is ink in this theme */
+    --primary: var(--ink);
+    --primary-foreground: var(--paper);
+
+    --secondary: 0 0% 96%;
+    /* #F5F5F5 */
+    --secondary-foreground: var(--ink);
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 32%;
+    /* #525252 */
+
+    --accent: var(--editorial);
+    --accent-foreground: var(--paper);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--divider);
+    --input: 0 0% 90%;
+    /* #E5E5E5 */
+    --ring: var(--ink);
+
+    /* Zero radius, as per spec */
+    --radius: 0rem;
+
+    /* Typography */
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
+    --font-body: "Lora", ui-serif, Georgia, serif;
+    --font-ui: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Editorial motion */
+    --ease-out: cubic-bezier(0.2, 0, 0, 1);
+    --dur-fast: 200ms;
+
+    /* Hard shadows */
+    --shadow-hard: 4px 4px 0 hsl(var(--ink));
+    --shadow-hard-sm: 2px 2px 0 hsl(var(--ink));
+
+    /* Texture */
+    --dot: hsl(var(--ink) / 0.08);
+    --rule: hsl(var(--ink) / 0.10);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Intentionally no dark mode for Newsprint Edition. */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    /* Dot grid paper texture */
+    background-image:
+      radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 0);
+    background-size: 14px 14px;
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: hsl(var(--editorial) / 0.18);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-ui {
+    font-family: var(--font-ui);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .justify-text {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .dropcap:first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 3.25rem;
+    line-height: 0.9;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+  }
+
+  .news-rule-grid {
+    background-image:
+      linear-gradient(to right, transparent 0, transparent 11px, var(--rule) 12px, transparent 12px);
+    background-size: 96px 1px;
+    background-repeat: repeat;
+  }
+
+  .hard-hover {
+    transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  }
+
+  .hard-hover:hover {
+    box-shadow: var(--shadow-hard);
+    transform: translate(-2px, -2px);
+  }
+
+  .hard-hover:focus-visible {
+    outline: 2px solid hsl(var(--editorial));
+    outline-offset: 2px;
+  }
+
+  .news-divider {
+    position: relative;
+  }
+
+  .news-divider::after {
+    content: "✧ ✧ ✧";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.95rem;
+    padding: 0 0.75rem;
+    background: hsl(var(--paper));
+    color: hsl(var(--ink) / 0.85);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+  }
+}
