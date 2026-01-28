@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/newsprint/SectionHeader";
 export function AboutColumn() {
   return (
     <section id="about" className="mx-auto mt-12 max-w-6xl px-6">
-      <SectionHeader kicker="Opinion" title="About the developer" right={"BY AYAN · WEB ENGINEER"} />
+      <SectionHeader kicker="Opinion" title="About Mohammed Ayan Zahoor" right={"BY MOHAMMED AYAN · WEB DEVELOPER"} />
 
       <div className="mt-8 grid grid-cols-12 gap-6">
         <div className="col-span-12 lg:col-span-8">
