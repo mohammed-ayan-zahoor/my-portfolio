@@ -28,4 +28,4 @@ User-agent: LinkedInBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://mohammed-ayan-zahoor.github.io/my-portfolio/sitemap.xml
+Sitemap: https://mohammed-ayan-zahoor.3ftech.in/sitemap.xml
